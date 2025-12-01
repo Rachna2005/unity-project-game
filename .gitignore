@@ -1,0 +1,29 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get large
+MemoryCaptures/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rider / VS
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Unity meta cache
+*.pidb
+*.booproj
+
+# Crash reports
+sysinfo.txt
