@@ -601,7 +601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1071, y: 550}
+  m_AnchoredPosition: {x: 1071, y: 556.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768326506
@@ -651,8 +651,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -908,6 +908,7 @@ GameObject:
   - component: {fileID: 1664276375}
   - component: {fileID: 1664276374}
   - component: {fileID: 1664276373}
+  - component: {fileID: 1664276376}
   m_Layer: 5
   m_Name: rulesButton
   m_TagString: Untagged
@@ -977,7 +978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664276374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1664276376}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RuleScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1664276374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,6 +1029,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664276371}
   m_CullTransparentMesh: 1
+--- !u!114 &1664276376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664276371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a017287f6c6e3e34cbff1c56d43de140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1720199126
 GameObject:
   m_ObjectHideFlags: 0
