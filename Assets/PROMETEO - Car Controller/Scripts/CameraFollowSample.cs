@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour {
+public class CameraFollowSample : MonoBehaviour {
 
 	public Transform carTransform;
 	[Range(1, 10)]
