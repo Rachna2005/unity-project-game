@@ -60,7 +60,7 @@ public class CarController : MonoBehaviour
         CurrentSpeedKmh = rb.velocity.magnitude * 3.6f;
 
         if (transform.position.y < fallYLimit)
-            TriggerGameOver("You fell off the road!");
+            TriggerGameOver("You fell off the road!", false);
     }
 
  void HandleMovement()
@@ -131,36 +131,37 @@ public class CarController : MonoBehaviour
         );
 
         if (lives <= 0)
-            TriggerGameOver("Too many violations!");
+            TriggerGameOver("Too many violations!", false);
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (isGameOver) return;
+   void OnCollisionEnter(Collision collision)
+{
+    if (isGameOver) return;
 
-        if (collision.gameObject.CompareTag("Crash"))
-            TriggerGameOver("You crashed!");
-    }
+    if (collision.gameObject.CompareTag("Crash"))
+        TriggerGameOver("You crashed!", true);
+}
 
-    void TriggerGameOver(string reason)
-    {
-        if (isGameOver) return;
-        isGameOver = true;
+    void TriggerGameOver(string reason, bool playCrashSound)
+{
+    if (isGameOver) return;
+    isGameOver = true;
 
-        Debug.Log("GAME OVER: " + reason);
+    Debug.Log("GAME OVER: " + reason);
 
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.isKinematic = true;
+    rb.velocity = Vector3.zero;
+    rb.angularVelocity = Vector3.zero;
+    rb.isKinematic = true;
 
-        if (engineAudio && engineAudio.isPlaying)
-            engineAudio.Stop();
+    if (engineAudio && engineAudio.isPlaying)
+        engineAudio.Stop();
 
-        if (crashAudio)
-            crashAudio.Play();
+    // ✅ Only play crash sound if this was a real crash
+    if (playCrashSound && crashAudio)
+        crashAudio.Play();
 
-        StartCoroutine(GameOverDelay());
-    }
+    StartCoroutine(GameOverDelay());
+}
 
     IEnumerator GameOverDelay()
     {

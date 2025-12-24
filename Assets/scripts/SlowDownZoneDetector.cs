@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SlowDownZoneDetector : MonoBehaviour
 {
-    public float speedLimitKmh = 20f;     // Max allowed speed
-    public float allowedOverTime = 2f;    // Seconds allowed above limit
+    public float speedLimitKmh = 30f;     // Max allowed speed
+    public float allowedOverTime = 1f;    // Seconds allowed above limit
 
     CarController car;
     float overSpeedTimer = 0f;
