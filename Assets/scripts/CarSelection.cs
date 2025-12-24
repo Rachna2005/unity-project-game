@@ -1,40 +1,40 @@
-using UnityEngine;
+// using UnityEngine;
 
-public class CarSelection : MonoBehaviour
-{
-    public GameObject[] cars;   
-    private int currentIndex = 0;
+// public class CarSelection : MonoBehaviour
+// {
+//     public GameObject[] cars;   
+//     private int currentIndex = 0;
 
-    void Start()
-    {
-        ShowCar(currentIndex);
-    }
+//     void Start()
+//     {
+//         ShowCar(currentIndex);
+//     }
 
-    void ShowCar(int index)
-    {
-        for (int i = 0; i < cars.Length; i++)
-        {
-            cars[i].SetActive(i == index);
-        }
-    }
+//     void ShowCar(int index)
+//     {
+//         for (int i = 0; i < cars.Length; i++)
+//         {
+//             cars[i].SetActive(i == index);
+//         }
+//     }
 
-     public void RightArrow()
-    {
-        currentIndex++;
+//      public void RightArrow()
+//     {
+//         currentIndex++;
 
-        if (currentIndex >= cars.Length)
-            currentIndex = 0;
+//         if (currentIndex >= cars.Length)
+//             currentIndex = 0;
 
-        ShowCar();
-    }
+//         ShowCar();
+//     }
 
-    public void LeftArrow()
-    {
-        currentIndex--;
+//     public void LeftArrow()
+//     {
+//         currentIndex--;
 
-        if (currentIndex < 0)
-            currentIndex = cars.Length - 1;
+//         if (currentIndex < 0)
+//             currentIndex = cars.Length - 1;
 
-        ShowCar();
-    }
-}
+//         ShowCar();
+//     }
+// }
