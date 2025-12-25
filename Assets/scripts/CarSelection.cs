@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarSelection : MonoBehaviour
 {
-    public GameObject[] cars;   
+    public GameObject[] cars;
     private int currentIndex = 0;
     public float rotationSpeed = 50f;
 
@@ -10,14 +11,15 @@ public class CarSelection : MonoBehaviour
     {
         ShowCar(currentIndex);
     }
+
     void Update()
     {
-        // Rotate only the current car
         if (cars.Length > 0 && cars[currentIndex] != null)
         {
             cars[currentIndex].transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
     }
+
     void ShowCar(int index)
     {
         for (int i = 0; i < cars.Length; i++)
@@ -26,23 +28,25 @@ public class CarSelection : MonoBehaviour
         }
     }
 
-     public void RightArrow()
+    public void RightArrow()
     {
-        currentIndex++;
-
-        if (currentIndex >= cars.Length)
-            currentIndex = 0;
-
+        currentIndex = (currentIndex + 1) % cars.Length;
         ShowCar(currentIndex);
     }
 
     public void LeftArrow()
     {
         currentIndex--;
-
-        if (currentIndex < 0)
-            currentIndex = cars.Length - 1;
-
+        if (currentIndex < 0) currentIndex = cars.Length - 1;
         ShowCar(currentIndex);
+    }
+
+    // 🔴 THIS IS THE KEY PART
+    public void StartGame()
+    {
+        PlayerPrefs.SetInt("SelectedCar", currentIndex);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene("GameScene");
     }
 }
