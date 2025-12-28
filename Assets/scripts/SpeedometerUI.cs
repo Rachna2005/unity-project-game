@@ -3,16 +3,17 @@ using TMPro;
 
 public class SpeedometerUI : MonoBehaviour
 {
-    public CarController car;     // Reference to car
     public TextMeshProUGUI speedText;
+    CarController car;
 
     void Update()
     {
-        if (car == null) return;
+        if (car == null)
+        {
+            car = FindObjectOfType<CarController>();
+            return;
+        }
 
-        // Round speed for display
-        int speed = Mathf.RoundToInt(car.CurrentSpeedKmh);
-
-        speedText.text = speed + " km/h";
+        speedText.text = Mathf.Round(car.CurrentSpeedKmh) + " km/h";
     }
 }

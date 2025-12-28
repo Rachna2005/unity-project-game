@@ -1,16 +1,19 @@
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class LivesUI : MonoBehaviour
 {
     public TextMeshProUGUI livesText;
-    public CarController car;
+    CarController car;
 
     void Update()
     {
-        if (car != null)
+        if (car == null)
         {
-            livesText.text = "Lives: " + car.lives;
+            car = FindObjectOfType<CarController>();
+            return;
         }
+
+        livesText.text = "Lives: " + car.lives;
     }
 }
