@@ -1,8 +1,8 @@
-\# 🚗 LetDriver Game (Unity)
+# 🚗 LetDriver Game (Unity)
 
 
 
-This project is a \*\*Unity-based driving simulation game\*\* designed to help players learn \*\*real traffic rules and safe driving habits\*\* through interactive gameplay.
+This project is a **Unity-based driving simulation game** designed to help players learn **real traffic rules and safe driving habits** through interactive gameplay.
 
 
 
@@ -14,7 +14,7 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## 🎯 Game Objectives
+## 🎯 Game Objectives
 
 
 
@@ -32,7 +32,7 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## 🎮 Game Features
+## 🎮 Game Features
 
 
 
@@ -62,21 +62,17 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## ⌨️ Controls
+## ⌨️ Controls
 
 
 
 | Key | Action |
-
 |---|---|
+| **W** | Accelerate |
+| **S** | Brake / Reverse |
+| **A** | Turn Left |
+| **D** | Turn Right |
 
-| \*\*W\*\* | Accelerate |
-
-| \*\*S\*\* | Brake / Reverse |
-
-| \*\*A\*\* | Turn Left |
-
-| \*\*D\*\* | Turn Right |
 
 
 
@@ -84,11 +80,11 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## 🗺️ Game Flow
+## 🗺️ Game Flow
 
 
 
-\### 1️⃣ Car Scene (Menu Scene)
+### 1️⃣ Car Scene (Menu Scene)
 
 \- Player selects a car
 
@@ -96,11 +92,11 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 \- Menu background music plays
 
-\- Click \*\*Start\*\* to begin the game
+\- Click **Play** to begin the game
 
 
 
-\### 2️⃣ Game Scene
+### 2️⃣ Game Scene
 
 \- Selected car spawns at the spawn point
 
@@ -120,17 +116,17 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## 📦 Project Requirements
+## 📦 Project Requirements
 
 
 
-\- \*\*Unity Hub\*\*
+\- **Unity Hub**
 
-\- \*\*Unity Editor\*\* 
+\- **Unity Editor** 
 
-\- \*\*Git\*\*
+\- **Git**
 
-\- Windows or macOS
+\- **Windows or macOS**
 
 
 
@@ -138,7 +134,7 @@ Players select a car, drive through roads with traffic signs, follow traffic law
 
 
 
-\## 🔽 How to Clone the Project
+## 🔽 How to Clone the Project
 
 
 
